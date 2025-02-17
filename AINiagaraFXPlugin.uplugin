@@ -1,0 +1,32 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "1.0",
+  "FriendlyName": "AINiagaraFXPlugin",
+  "Description": "Custom Niagara FX Plugin with Blueprint support.",
+  "Category": "Other",
+  "CreatedBy": "ImmersaLab",
+  "CreatedByURL": "https://immersalab.com",
+  "DocsURL": "",
+  "MarketplaceURL": "",
+  "SupportURL": "",
+  "CanContainContent": false,
+  "IsBetaVersion": false,
+  "IsExperimentalVersion": false,
+  "Installed": false,
+  "EnabledByDefault": true,
+  "Modules": [
+    {
+      "Name": "AINiagaraFXPlugin",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    },
+    {
+      "Name": "AINiagaraFXPluginEditor",
+      "Type": "Editor",
+      "LoadingPhase": "PostEngineInit",
+      "WhitelistPlatforms": [ "Win64", "Mac", "Linux" ],
+      "BlacklistPlatforms": [ "Android", "iOS" ]
+    }
+  ]
+}

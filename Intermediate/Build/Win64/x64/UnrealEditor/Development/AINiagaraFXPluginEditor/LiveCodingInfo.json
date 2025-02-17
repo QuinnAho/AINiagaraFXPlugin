@@ -1,0 +1,12 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.AINiagaraFXPluginEditor.cpp.obj": [
+			"AINiagaraFXPluginEditor.init.gen.cpp.obj",
+			"ExposeNiagaraVariablesEditorBPLibrary.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
+			"AINiagaraFXPluginEditor.cpp.obj",
+			"ExposeNiagaraVariablesEditorBPLibrary.cpp.obj"
+		]
+	}
+}

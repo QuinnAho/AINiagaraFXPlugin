@@ -1,0 +1,8 @@
+{
+	"BuildId": "37670630",
+	"Modules": 
+	{
+		"AINiagaraFXPlugin": "UnrealEditor-AINiagaraFXPlugin.dll",
+		"AINiagaraFXPluginEditor": "UnrealEditor-AINiagaraFXPluginEditor.dll"
+	}
+}
