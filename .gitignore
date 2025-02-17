@@ -1,0 +1,80 @@
+# Unreal Engine Plugin Git Ignore
+
+# Ignore binaries and intermediates
+Binaries/
+Intermediate/
+DerivedDataCache/
+Saved/
+Build/
+# If using CMake
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+
+# Ignore Visual Studio files
+.vscode/
+*.VC.db
+*.VC.opendb
+*.sln
+*.suo
+*.user
+*.ncb
+*.log
+*.sdf
+*.opensdf
+ipch/
+*.aps
+*.ilk
+*.pdb
+*.idb
+
+# Ignore macOS specific files
+.DS_Store
+
+# Ignore Linux specific files
+*.swp
+*~ 
+*.bak
+*.temp
+*.log
+*.dmp
+*.o
+*.lo
+*.la
+*.al
+*.libs
+*.so
+*.so.*
+
+# Ignore Unreal Engine specific files
+*.xcodeproj
+*.xcworkspace
+*.xcuserstate
+*.xcsettings
+
+# Ignore Unreal Engine Plugin build outputs
+*.dll
+*.lib
+*.exp
+*.app
+*.dylib
+*.exe
+*.obj
+*.manifest
+*.rsp
+
+# Ignore Unreal Engine Plugin auto-generated folders
+Documentation/
+
+# Ignore Python virtual environments (if scripting is used)
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore Unreal Engine auto-generated plugin files
+*.generated.*
+*.gen.cpp
+*.gen.h
