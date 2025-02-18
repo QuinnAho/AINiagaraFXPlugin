@@ -1,12 +1,12 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "d:\\immersalab\\ueprojects\\ainiagaraplugin\\plugins\\ainiagarafxplugin\\source\\ainiagarafxplugin\\private\\exposeniagaravariablesbplibrary.cpp",
+        "Source": "d:\\immersalab\\ueprojects\\ainiagaraplugin\\plugins\\ainiagarafxplugin\\ainiagarafxplugin\\source\\ainiagarafxplugin\\private\\exposeniagaravariablesbplibrary.cpp",
         "ProvidedModule": "",
         "Includes": [
-            "d:\\immersalab\\ueprojects\\ainiagaraplugin\\plugins\\ainiagarafxplugin\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\ainiagarafxplugin\\definitions.ainiagarafxplugin.h",
+            "d:\\immersalab\\ueprojects\\ainiagaraplugin\\plugins\\ainiagarafxplugin\\ainiagarafxplugin\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\ainiagarafxplugin\\definitions.ainiagarafxplugin.h",
             "d:\\immersalab\\ueprojects\\ainiagaraplugin\\intermediate\\build\\win64\\x64\\ainiagaraplugineditor\\development\\unrealed\\shareddefinitions.unrealed.project.valapi.cpp20.inclorderunreal5_3.h",
-            "d:\\immersalab\\ueprojects\\ainiagaraplugin\\plugins\\ainiagarafxplugin\\source\\ainiagarafxplugin\\public\\exposeniagaravariablesbplibrary.h",
+            "d:\\immersalab\\ueprojects\\ainiagaraplugin\\plugins\\ainiagarafxplugin\\ainiagarafxplugin\\source\\ainiagarafxplugin\\public\\exposeniagaravariablesbplibrary.h",
             "d:\\unrealversions\\ue_5.5\\engine\\source\\runtime\\core\\public\\coreminimal.h",
             "d:\\unrealversions\\ue_5.5\\engine\\source\\runtime\\core\\public\\coretypes.h",
             "d:\\unrealversions\\ue_5.5\\engine\\source\\runtime\\core\\public\\hal\\platform.h",
@@ -575,7 +575,7 @@
             "d:\\unrealversions\\ue_5.5\\engine\\source\\runtime\\coreuobject\\public\\uobject\\enumproperty.h",
             "d:\\unrealversions\\ue_5.5\\engine\\source\\runtime\\coreuobject\\public\\uobject\\fieldpathproperty.h",
             "d:\\unrealversions\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\blueprintfunctionlibrary.generated.h",
-            "d:\\immersalab\\ueprojects\\ainiagaraplugin\\plugins\\ainiagarafxplugin\\source\\ainiagarafxplugin\\public\\niagaravariablehelpers.h",
+            "d:\\immersalab\\ueprojects\\ainiagaraplugin\\plugins\\ainiagarafxplugin\\ainiagarafxplugin\\source\\ainiagarafxplugin\\public\\niagaravariablehelpers.h",
             "d:\\unrealversions\\ue_5.5\\engine\\source\\editor\\unrealed\\public\\editor.h",
             "d:\\unrealversions\\ue_5.5\\engine\\source\\runtime\\core\\public\\templates\\scopedcallback.h",
             "d:\\unrealversions\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\engine\\level.h",
@@ -1608,8 +1608,8 @@
             "d:\\unrealversions\\ue_5.5\\engine\\plugins\\fx\\niagara\\intermediate\\build\\win64\\unrealeditor\\inc\\niagara\\uht\\niagarascalabilitymanager.generated.h",
             "d:\\unrealversions\\ue_5.5\\engine\\plugins\\fx\\niagara\\source\\niagara\\public\\niagaradeferredmethodqueue.h",
             "d:\\unrealversions\\ue_5.5\\engine\\plugins\\fx\\niagara\\intermediate\\build\\win64\\unrealeditor\\inc\\niagara\\uht\\niagaraworldmanager.generated.h",
-            "d:\\immersalab\\ueprojects\\ainiagaraplugin\\plugins\\ainiagarafxplugin\\intermediate\\build\\win64\\unrealeditor\\inc\\ainiagarafxplugin\\uht\\niagaravariablehelpers.generated.h",
-            "d:\\immersalab\\ueprojects\\ainiagaraplugin\\plugins\\ainiagarafxplugin\\intermediate\\build\\win64\\unrealeditor\\inc\\ainiagarafxplugin\\uht\\exposeniagaravariablesbplibrary.generated.h"
+            "d:\\immersalab\\ueprojects\\ainiagaraplugin\\plugins\\ainiagarafxplugin\\ainiagarafxplugin\\intermediate\\build\\win64\\unrealeditor\\inc\\ainiagarafxplugin\\uht\\niagaravariablehelpers.generated.h",
+            "d:\\immersalab\\ueprojects\\ainiagaraplugin\\plugins\\ainiagarafxplugin\\ainiagarafxplugin\\intermediate\\build\\win64\\unrealeditor\\inc\\ainiagarafxplugin\\uht\\exposeniagaravariablesbplibrary.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

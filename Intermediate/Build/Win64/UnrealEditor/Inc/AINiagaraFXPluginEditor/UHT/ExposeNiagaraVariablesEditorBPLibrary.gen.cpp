@@ -12,10 +12,80 @@ void EmptyLinkFunctionForGeneratedCodeExposeNiagaraVariablesEditorBPLibrary() {}
 // Begin Cross Module References
 AINIAGARAFXPLUGINEDITOR_API UClass* Z_Construct_UClass_UExposeNiagaraVariablesEditorBPLibrary();
 AINIAGARAFXPLUGINEDITOR_API UClass* Z_Construct_UClass_UExposeNiagaraVariablesEditorBPLibrary_NoRegister();
+AINIAGARAFXPLUGINEDITOR_API UScriptStruct* Z_Construct_UScriptStruct_FNiagaraUserParameterInfo();
 ENGINE_API UClass* Z_Construct_UClass_UBlueprintFunctionLibrary();
 NIAGARA_API UClass* Z_Construct_UClass_UNiagaraComponent_NoRegister();
 UPackage* Z_Construct_UPackage__Script_AINiagaraFXPluginEditor();
 // End Cross Module References
+
+// Begin ScriptStruct FNiagaraUserParameterInfo
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_NiagaraUserParameterInfo;
+class UScriptStruct* FNiagaraUserParameterInfo::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_NiagaraUserParameterInfo.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_NiagaraUserParameterInfo.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FNiagaraUserParameterInfo, (UObject*)Z_Construct_UPackage__Script_AINiagaraFXPluginEditor(), TEXT("NiagaraUserParameterInfo"));
+	}
+	return Z_Registration_Info_UScriptStruct_NiagaraUserParameterInfo.OuterSingleton;
+}
+template<> AINIAGARAFXPLUGINEDITOR_API UScriptStruct* StaticStruct<FNiagaraUserParameterInfo>()
+{
+	return FNiagaraUserParameterInfo::StaticStruct();
+}
+struct Z_Construct_UScriptStruct_FNiagaraUserParameterInfo_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Public/ExposeNiagaraVariablesEditorBPLibrary.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ParameterName_MetaData[] = {
+		{ "Category", "Niagara" },
+		{ "ModuleRelativePath", "Public/ExposeNiagaraVariablesEditorBPLibrary.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ParameterType_MetaData[] = {
+		{ "Category", "Niagara" },
+		{ "ModuleRelativePath", "Public/ExposeNiagaraVariablesEditorBPLibrary.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStrPropertyParams NewProp_ParameterName;
+	static const UECodeGen_Private::FStrPropertyParams NewProp_ParameterType;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static void* NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FNiagaraUserParameterInfo>();
+	}
+	static const UECodeGen_Private::FStructParams StructParams;
+};
+const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FNiagaraUserParameterInfo_Statics::NewProp_ParameterName = { "ParameterName", nullptr, (EPropertyFlags)0x0010000000000014, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FNiagaraUserParameterInfo, ParameterName), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ParameterName_MetaData), NewProp_ParameterName_MetaData) };
+const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FNiagaraUserParameterInfo_Statics::NewProp_ParameterType = { "ParameterType", nullptr, (EPropertyFlags)0x0010000000000014, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FNiagaraUserParameterInfo, ParameterType), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ParameterType_MetaData), NewProp_ParameterType_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FNiagaraUserParameterInfo_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FNiagaraUserParameterInfo_Statics::NewProp_ParameterName,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FNiagaraUserParameterInfo_Statics::NewProp_ParameterType,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FNiagaraUserParameterInfo_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FNiagaraUserParameterInfo_Statics::StructParams = {
+	(UObject* (*)())Z_Construct_UPackage__Script_AINiagaraFXPluginEditor,
+	nullptr,
+	&NewStructOps,
+	"NiagaraUserParameterInfo",
+	Z_Construct_UScriptStruct_FNiagaraUserParameterInfo_Statics::PropPointers,
+	UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FNiagaraUserParameterInfo_Statics::PropPointers),
+	sizeof(FNiagaraUserParameterInfo),
+	alignof(FNiagaraUserParameterInfo),
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	EStructFlags(0x00000001),
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FNiagaraUserParameterInfo_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FNiagaraUserParameterInfo_Statics::Struct_MetaDataParams)
+};
+UScriptStruct* Z_Construct_UScriptStruct_FNiagaraUserParameterInfo()
+{
+	if (!Z_Registration_Info_UScriptStruct_NiagaraUserParameterInfo.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_NiagaraUserParameterInfo.InnerSingleton, Z_Construct_UScriptStruct_FNiagaraUserParameterInfo_Statics::StructParams);
+	}
+	return Z_Registration_Info_UScriptStruct_NiagaraUserParameterInfo.InnerSingleton;
+}
+// End ScriptStruct FNiagaraUserParameterInfo
 
 // Begin Class UExposeNiagaraVariablesEditorBPLibrary Function GetAllNiagaraComponentsInScene
 struct Z_Construct_UFunction_UExposeNiagaraVariablesEditorBPLibrary_GetAllNiagaraComponentsInScene_Statics
@@ -142,15 +212,18 @@ UExposeNiagaraVariablesEditorBPLibrary::~UExposeNiagaraVariablesEditorBPLibrary(
 // End Class UExposeNiagaraVariablesEditorBPLibrary
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Immersalab_UEProjects_AINiagaraPlugin_Plugins_AINiagaraFXPlugin_Source_AINiagaraFXPluginEditor_Public_ExposeNiagaraVariablesEditorBPLibrary_h_Statics
+struct Z_CompiledInDeferFile_FID_Immersalab_UEProjects_AINiagaraPlugin_Plugins_AINiagaraFXPlugin_AINiagaraFXPlugin_Source_AINiagaraFXPluginEditor_Public_ExposeNiagaraVariablesEditorBPLibrary_h_Statics
 {
+	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
+		{ FNiagaraUserParameterInfo::StaticStruct, Z_Construct_UScriptStruct_FNiagaraUserParameterInfo_Statics::NewStructOps, TEXT("NiagaraUserParameterInfo"), &Z_Registration_Info_UScriptStruct_NiagaraUserParameterInfo, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FNiagaraUserParameterInfo), 3396873166U) },
+	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_UExposeNiagaraVariablesEditorBPLibrary, UExposeNiagaraVariablesEditorBPLibrary::StaticClass, TEXT("UExposeNiagaraVariablesEditorBPLibrary"), &Z_Registration_Info_UClass_UExposeNiagaraVariablesEditorBPLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UExposeNiagaraVariablesEditorBPLibrary), 3304046017U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Immersalab_UEProjects_AINiagaraPlugin_Plugins_AINiagaraFXPlugin_Source_AINiagaraFXPluginEditor_Public_ExposeNiagaraVariablesEditorBPLibrary_h_2235244531(TEXT("/Script/AINiagaraFXPluginEditor"),
-	Z_CompiledInDeferFile_FID_Immersalab_UEProjects_AINiagaraPlugin_Plugins_AINiagaraFXPlugin_Source_AINiagaraFXPluginEditor_Public_ExposeNiagaraVariablesEditorBPLibrary_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Immersalab_UEProjects_AINiagaraPlugin_Plugins_AINiagaraFXPlugin_Source_AINiagaraFXPluginEditor_Public_ExposeNiagaraVariablesEditorBPLibrary_h_Statics::ClassInfo),
-	nullptr, 0,
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Immersalab_UEProjects_AINiagaraPlugin_Plugins_AINiagaraFXPlugin_AINiagaraFXPlugin_Source_AINiagaraFXPluginEditor_Public_ExposeNiagaraVariablesEditorBPLibrary_h_4287129353(TEXT("/Script/AINiagaraFXPluginEditor"),
+	Z_CompiledInDeferFile_FID_Immersalab_UEProjects_AINiagaraPlugin_Plugins_AINiagaraFXPlugin_AINiagaraFXPlugin_Source_AINiagaraFXPluginEditor_Public_ExposeNiagaraVariablesEditorBPLibrary_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Immersalab_UEProjects_AINiagaraPlugin_Plugins_AINiagaraFXPlugin_AINiagaraFXPlugin_Source_AINiagaraFXPluginEditor_Public_ExposeNiagaraVariablesEditorBPLibrary_h_Statics::ClassInfo),
+	Z_CompiledInDeferFile_FID_Immersalab_UEProjects_AINiagaraPlugin_Plugins_AINiagaraFXPlugin_AINiagaraFXPlugin_Source_AINiagaraFXPluginEditor_Public_ExposeNiagaraVariablesEditorBPLibrary_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Immersalab_UEProjects_AINiagaraPlugin_Plugins_AINiagaraFXPlugin_AINiagaraFXPlugin_Source_AINiagaraFXPluginEditor_Public_ExposeNiagaraVariablesEditorBPLibrary_h_Statics::ScriptStructInfo),
 	nullptr, 0);
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

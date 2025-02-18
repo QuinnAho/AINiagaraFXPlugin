@@ -89,9 +89,14 @@ public:
 
     UFUNCTION(BlueprintCallable, Category = "Editor|Niagara", meta = (CallInEditor = "true"))
         static UNiagaraComponent* GetNiagaraComponentByIndex(int32 Index, const TArray<UNiagaraComponent*>& NiagaraComponents);
-    
-    UFUNCTION(BlueprintCallable, Category = "Niagara|Variables")
-        static TMap<FName, FString> GetAllUserNiagaraVariables(UNiagaraComponent* NiagaraComponent);
+
+    /** Get all parameter names from a Niagara Component in both editor and runtime */
+    UFUNCTION(BlueprintCallable, Category = "Niagara|Variables", meta = (CallInEditor = "true"))
+        static TArray<FString> GetNiagaraParameterNames(UNiagaraComponent* NiagaraComponent);
+
+    /** Retrieves the Niagara System (UNiagaraSystem) from a given Niagara Component (UNiagaraComponent) */
+    UFUNCTION(BlueprintCallable, Category = "Niagara|System")
+        static UNiagaraSystem* GetNiagaraSystemFromComponent(UNiagaraComponent* NiagaraComponent);
 
 
     // Functions for setting Niagara variables

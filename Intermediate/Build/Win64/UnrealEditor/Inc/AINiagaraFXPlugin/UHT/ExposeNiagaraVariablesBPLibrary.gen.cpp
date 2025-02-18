@@ -31,6 +31,7 @@ ENGINE_API UClass* Z_Construct_UClass_UMaterialInterface_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UTexture_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UTextureRenderTarget_NoRegister();
 NIAGARA_API UClass* Z_Construct_UClass_UNiagaraComponent_NoRegister();
+NIAGARA_API UClass* Z_Construct_UClass_UNiagaraSystem_NoRegister();
 NIAGARA_API UScriptStruct* Z_Construct_UScriptStruct_FNiagaraID();
 UPackage* Z_Construct_UPackage__Script_AINiagaraFXPlugin();
 // End Cross Module References
@@ -97,6 +98,122 @@ DEFINE_FUNCTION(UExposeNiagaraVariablesBPLibrary::execGetNiagaraComponentByIndex
 	P_NATIVE_END;
 }
 // End Class UExposeNiagaraVariablesBPLibrary Function GetNiagaraComponentByIndex
+
+// Begin Class UExposeNiagaraVariablesBPLibrary Function GetNiagaraParameterNames
+struct Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraParameterNames_Statics
+{
+	struct ExposeNiagaraVariablesBPLibrary_eventGetNiagaraParameterNames_Parms
+	{
+		UNiagaraComponent* NiagaraComponent;
+		TArray<FString> ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "CallInEditor", "true" },
+		{ "Category", "Niagara|Variables" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Get all parameter names from a Niagara Component in both editor and runtime */" },
+#endif
+		{ "ModuleRelativePath", "Public/ExposeNiagaraVariablesBPLibrary.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Get all parameter names from a Niagara Component in both editor and runtime" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_NiagaraComponent_MetaData[] = {
+		{ "EditInline", "true" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_NiagaraComponent;
+	static const UECodeGen_Private::FStrPropertyParams NewProp_ReturnValue_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraParameterNames_Statics::NewProp_NiagaraComponent = { "NiagaraComponent", nullptr, (EPropertyFlags)0x0010000000080080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ExposeNiagaraVariablesBPLibrary_eventGetNiagaraParameterNames_Parms, NiagaraComponent), Z_Construct_UClass_UNiagaraComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_NiagaraComponent_MetaData), NewProp_NiagaraComponent_MetaData) };
+const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraParameterNames_Statics::NewProp_ReturnValue_Inner = { "ReturnValue", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraParameterNames_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ExposeNiagaraVariablesBPLibrary_eventGetNiagaraParameterNames_Parms, ReturnValue), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraParameterNames_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraParameterNames_Statics::NewProp_NiagaraComponent,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraParameterNames_Statics::NewProp_ReturnValue_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraParameterNames_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraParameterNames_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraParameterNames_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UExposeNiagaraVariablesBPLibrary, nullptr, "GetNiagaraParameterNames", nullptr, nullptr, Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraParameterNames_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraParameterNames_Statics::PropPointers), sizeof(Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraParameterNames_Statics::ExposeNiagaraVariablesBPLibrary_eventGetNiagaraParameterNames_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraParameterNames_Statics::Function_MetaDataParams), Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraParameterNames_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraParameterNames_Statics::ExposeNiagaraVariablesBPLibrary_eventGetNiagaraParameterNames_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraParameterNames()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraParameterNames_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UExposeNiagaraVariablesBPLibrary::execGetNiagaraParameterNames)
+{
+	P_GET_OBJECT(UNiagaraComponent,Z_Param_NiagaraComponent);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(TArray<FString>*)Z_Param__Result=UExposeNiagaraVariablesBPLibrary::GetNiagaraParameterNames(Z_Param_NiagaraComponent);
+	P_NATIVE_END;
+}
+// End Class UExposeNiagaraVariablesBPLibrary Function GetNiagaraParameterNames
+
+// Begin Class UExposeNiagaraVariablesBPLibrary Function GetNiagaraSystemFromComponent
+struct Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraSystemFromComponent_Statics
+{
+	struct ExposeNiagaraVariablesBPLibrary_eventGetNiagaraSystemFromComponent_Parms
+	{
+		UNiagaraComponent* NiagaraComponent;
+		UNiagaraSystem* ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Niagara|System" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Retrieves the Niagara System (UNiagaraSystem) from a given Niagara Component (UNiagaraComponent) */" },
+#endif
+		{ "ModuleRelativePath", "Public/ExposeNiagaraVariablesBPLibrary.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Retrieves the Niagara System (UNiagaraSystem) from a given Niagara Component (UNiagaraComponent)" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_NiagaraComponent_MetaData[] = {
+		{ "EditInline", "true" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_NiagaraComponent;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraSystemFromComponent_Statics::NewProp_NiagaraComponent = { "NiagaraComponent", nullptr, (EPropertyFlags)0x0010000000080080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ExposeNiagaraVariablesBPLibrary_eventGetNiagaraSystemFromComponent_Parms, NiagaraComponent), Z_Construct_UClass_UNiagaraComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_NiagaraComponent_MetaData), NewProp_NiagaraComponent_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraSystemFromComponent_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ExposeNiagaraVariablesBPLibrary_eventGetNiagaraSystemFromComponent_Parms, ReturnValue), Z_Construct_UClass_UNiagaraSystem_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraSystemFromComponent_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraSystemFromComponent_Statics::NewProp_NiagaraComponent,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraSystemFromComponent_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraSystemFromComponent_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraSystemFromComponent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UExposeNiagaraVariablesBPLibrary, nullptr, "GetNiagaraSystemFromComponent", nullptr, nullptr, Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraSystemFromComponent_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraSystemFromComponent_Statics::PropPointers), sizeof(Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraSystemFromComponent_Statics::ExposeNiagaraVariablesBPLibrary_eventGetNiagaraSystemFromComponent_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraSystemFromComponent_Statics::Function_MetaDataParams), Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraSystemFromComponent_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraSystemFromComponent_Statics::ExposeNiagaraVariablesBPLibrary_eventGetNiagaraSystemFromComponent_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraSystemFromComponent()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraSystemFromComponent_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UExposeNiagaraVariablesBPLibrary::execGetNiagaraSystemFromComponent)
+{
+	P_GET_OBJECT(UNiagaraComponent,Z_Param_NiagaraComponent);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UNiagaraSystem**)Z_Param__Result=UExposeNiagaraVariablesBPLibrary::GetNiagaraSystemFromComponent(Z_Param_NiagaraComponent);
+	P_NATIVE_END;
+}
+// End Class UExposeNiagaraVariablesBPLibrary Function GetNiagaraSystemFromComponent
 
 // Begin Class UExposeNiagaraVariablesBPLibrary Function GetNiagaraVariableActor
 struct Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraVariableActor_Statics
@@ -1976,6 +2093,8 @@ void UExposeNiagaraVariablesBPLibrary::StaticRegisterNativesUExposeNiagaraVariab
 	UClass* Class = UExposeNiagaraVariablesBPLibrary::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
 		{ "GetNiagaraComponentByIndex", &UExposeNiagaraVariablesBPLibrary::execGetNiagaraComponentByIndex },
+		{ "GetNiagaraParameterNames", &UExposeNiagaraVariablesBPLibrary::execGetNiagaraParameterNames },
+		{ "GetNiagaraSystemFromComponent", &UExposeNiagaraVariablesBPLibrary::execGetNiagaraSystemFromComponent },
 		{ "GetNiagaraVariableActor", &UExposeNiagaraVariablesBPLibrary::execGetNiagaraVariableActor },
 		{ "GetNiagaraVariableBool", &UExposeNiagaraVariablesBPLibrary::execGetNiagaraVariableBool },
 		{ "GetNiagaraVariableColor", &UExposeNiagaraVariablesBPLibrary::execGetNiagaraVariableColor },
@@ -2019,6 +2138,8 @@ struct Z_Construct_UClass_UExposeNiagaraVariablesBPLibrary_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraComponentByIndex, "GetNiagaraComponentByIndex" }, // 3600281754
+		{ &Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraParameterNames, "GetNiagaraParameterNames" }, // 3409790876
+		{ &Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraSystemFromComponent, "GetNiagaraSystemFromComponent" }, // 1661173208
 		{ &Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraVariableActor, "GetNiagaraVariableActor" }, // 3308651658
 		{ &Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraVariableBool, "GetNiagaraVariableBool" }, // 3954946396
 		{ &Z_Construct_UFunction_UExposeNiagaraVariablesBPLibrary_GetNiagaraVariableColor, "GetNiagaraVariableColor" }, // 3037341578
@@ -2088,14 +2209,14 @@ UExposeNiagaraVariablesBPLibrary::~UExposeNiagaraVariablesBPLibrary() {}
 // End Class UExposeNiagaraVariablesBPLibrary
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Immersalab_UEProjects_AINiagaraPlugin_Plugins_AINiagaraFXPlugin_Source_AINiagaraFXPlugin_Public_ExposeNiagaraVariablesBPLibrary_h_Statics
+struct Z_CompiledInDeferFile_FID_Immersalab_UEProjects_AINiagaraPlugin_Plugins_AINiagaraFXPlugin_AINiagaraFXPlugin_Source_AINiagaraFXPlugin_Public_ExposeNiagaraVariablesBPLibrary_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UExposeNiagaraVariablesBPLibrary, UExposeNiagaraVariablesBPLibrary::StaticClass, TEXT("UExposeNiagaraVariablesBPLibrary"), &Z_Registration_Info_UClass_UExposeNiagaraVariablesBPLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UExposeNiagaraVariablesBPLibrary), 1604557059U) },
+		{ Z_Construct_UClass_UExposeNiagaraVariablesBPLibrary, UExposeNiagaraVariablesBPLibrary::StaticClass, TEXT("UExposeNiagaraVariablesBPLibrary"), &Z_Registration_Info_UClass_UExposeNiagaraVariablesBPLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UExposeNiagaraVariablesBPLibrary), 4241071075U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Immersalab_UEProjects_AINiagaraPlugin_Plugins_AINiagaraFXPlugin_Source_AINiagaraFXPlugin_Public_ExposeNiagaraVariablesBPLibrary_h_986167137(TEXT("/Script/AINiagaraFXPlugin"),
-	Z_CompiledInDeferFile_FID_Immersalab_UEProjects_AINiagaraPlugin_Plugins_AINiagaraFXPlugin_Source_AINiagaraFXPlugin_Public_ExposeNiagaraVariablesBPLibrary_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Immersalab_UEProjects_AINiagaraPlugin_Plugins_AINiagaraFXPlugin_Source_AINiagaraFXPlugin_Public_ExposeNiagaraVariablesBPLibrary_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Immersalab_UEProjects_AINiagaraPlugin_Plugins_AINiagaraFXPlugin_AINiagaraFXPlugin_Source_AINiagaraFXPlugin_Public_ExposeNiagaraVariablesBPLibrary_h_3884864840(TEXT("/Script/AINiagaraFXPlugin"),
+	Z_CompiledInDeferFile_FID_Immersalab_UEProjects_AINiagaraPlugin_Plugins_AINiagaraFXPlugin_AINiagaraFXPlugin_Source_AINiagaraFXPlugin_Public_ExposeNiagaraVariablesBPLibrary_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Immersalab_UEProjects_AINiagaraPlugin_Plugins_AINiagaraFXPlugin_AINiagaraFXPlugin_Source_AINiagaraFXPlugin_Public_ExposeNiagaraVariablesBPLibrary_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

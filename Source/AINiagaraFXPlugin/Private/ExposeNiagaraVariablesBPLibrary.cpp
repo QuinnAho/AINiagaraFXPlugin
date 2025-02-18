@@ -110,97 +110,93 @@ UNiagaraComponent* UExposeNiagaraVariablesBPLibrary::GetNiagaraComponentByIndex(
     return nullptr;
 }
 
-TMap<FName, FString> UExposeNiagaraVariablesBPLibrary::GetAllUserNiagaraVariables(UNiagaraComponent* NiagaraComponent)
+TArray<FString> UExposeNiagaraVariablesBPLibrary::GetNiagaraParameterNames(UNiagaraComponent* NiagaraComponent)
 {
-    TMap<FName, FString> UserVariables;
+    TArray<FString> ParameterNames;
 
     if (!NiagaraComponent)
     {
-        UE_LOG(LogTemp, Warning, TEXT("GetAllUserNiagaraVariables: NiagaraComponent is null!"));
-        return UserVariables;
+        UE_LOG(LogTemp, Warning, TEXT("GetNiagaraParameterNames: Invalid Niagara Component!"));
+        return ParameterNames;
     }
 
-    // Get the system instance controller
+    // Get the Niagara System (Used for Editor Parameters)
+    UNiagaraSystem* NiagaraSystem = NiagaraComponent->GetAsset();
+    if (!NiagaraSystem)
+    {
+        UE_LOG(LogTemp, Warning, TEXT("GetNiagaraParameterNames: No valid Niagara System!"));
+        return ParameterNames;
+    }
+
+    UE_LOG(LogTemp, Log, TEXT("GetNiagaraParameterNames: Checking mode..."));
+
+    // **Editor Mode**: Retrieve exposed parameters when not running
+#if WITH_EDITOR
+    if (!NiagaraComponent->IsActive() && GEditor)
+    {
+        UE_LOG(LogTemp, Log, TEXT("GetNiagaraParameterNames: Retrieving parameters in EDITOR mode"));
+
+        TArray<FNiagaraVariable> UserParams;
+        NiagaraSystem->GetExposedParameters().GetUserParameters(UserParams);
+
+        for (const FNiagaraVariable& UserParam : UserParams)
+        {
+            ParameterNames.Add(UserParam.GetName().ToString());
+        }
+
+        UE_LOG(LogTemp, Log, TEXT("GetNiagaraParameterNames: Found %d user parameters in EDITOR mode."), ParameterNames.Num());
+        return ParameterNames;
+    }
+#endif
+
+    // **Runtime Mode**: Retrieve parameters from the system instance
     FNiagaraSystemInstanceControllerPtr SystemInstanceController = NiagaraComponent->GetSystemInstanceController();
     if (!SystemInstanceController.IsValid())
     {
-        UE_LOG(LogTemp, Warning, TEXT("GetAllUserNiagaraVariables: SystemInstanceController is not valid!"));
-        return UserVariables;
+        UE_LOG(LogTemp, Warning, TEXT("GetNiagaraParameterNames: No valid System Instance Controller!"));
+        return ParameterNames;
     }
 
-    // Get the system instance from the controller
     FNiagaraSystemInstance* SystemInstance = SystemInstanceController->GetSystemInstance_Unsafe();
     if (!SystemInstance)
     {
-        UE_LOG(LogTemp, Warning, TEXT("GetAllUserNiagaraVariables: SystemInstance is null!"));
-        return UserVariables;
+        UE_LOG(LogTemp, Warning, TEXT("GetNiagaraParameterNames: No valid System Instance!"));
+        return ParameterNames;
     }
 
-    // Access the instance parameter store
     const FNiagaraParameterStore& ParameterStore = SystemInstance->GetInstanceParameters();
 
-    UE_LOG(LogTemp, Log, TEXT("---- Listing User Parameters in Niagara Component ----"));
-
-    for (const FNiagaraVariable& Variable : ParameterStore.ReadParameterVariables())
+    // Retrieve all parameter names
+    for (const FNiagaraVariableBase& Parameter : ParameterStore.ReadParameterVariables())
     {
-        // Ensure it's a user-defined variable
-        if (Variable.GetName().ToString().StartsWith("User."))
-        {
-            FString ValueAsString;
-
-            // Retrieve value using helper functions
-            if (Variable.GetType() == FNiagaraTypeDefinition::GetFloatDef())
-            {
-                float Value;
-                if (UNiagaraVariableHelpers::GetNiagaraVariableFloat(NiagaraComponent, ENiagaraNamespace::User, Variable.GetName(), Value))
-                {
-                    ValueAsString = FString::Printf(TEXT("%f"), Value);
-                }
-            }
-            else if (Variable.GetType() == FNiagaraTypeDefinition::GetIntDef())
-            {
-                int32 Value;
-                if (UNiagaraVariableHelpers::GetNiagaraVariableInt(NiagaraComponent, ENiagaraNamespace::User, Variable.GetName(), Value))
-                {
-                    ValueAsString = FString::Printf(TEXT("%d"), Value);
-                }
-            }
-            else if (Variable.GetType() == FNiagaraTypeDefinition::GetBoolDef())
-            {
-                bool Value;
-                if (UNiagaraVariableHelpers::GetNiagaraVariableBool(NiagaraComponent, ENiagaraNamespace::User, Variable.GetName(), Value))
-                {
-                    ValueAsString = Value ? TEXT("true") : TEXT("false");
-                }
-            }
-            else if (Variable.GetType() == FNiagaraTypeDefinition::GetVec3Def())
-            {
-                FVector Value;
-                if (UNiagaraVariableHelpers::GetNiagaraVariableVec3(NiagaraComponent, ENiagaraNamespace::User, Variable.GetName(), Value))
-                {
-                    ValueAsString = Value.ToString();
-                }
-            }
-            else if (Variable.GetType() == FNiagaraTypeDefinition::GetColorDef())
-            {
-                FLinearColor Value;
-                if (UNiagaraVariableHelpers::GetNiagaraVariableColor(NiagaraComponent, ENiagaraNamespace::User, Variable.GetName(), Value))
-                {
-                    ValueAsString = Value.ToString();
-                }
-            }
-            else
-            {
-                ValueAsString = TEXT("Unsupported Type");
-            }
-
-            UE_LOG(LogTemp, Log, TEXT("User Variable: %s | Value: %s"), *Variable.GetName().ToString(), *ValueAsString);
-            UserVariables.Add(Variable.GetName(), ValueAsString);
-        }
+        ParameterNames.Add(Parameter.GetName().ToString());
     }
 
-    return UserVariables;
+    UE_LOG(LogTemp, Log, TEXT("GetNiagaraParameterNames: Found %d parameters at runtime."), ParameterNames.Num());
+
+    return ParameterNames;
 }
+
+UNiagaraSystem* UExposeNiagaraVariablesBPLibrary::GetNiagaraSystemFromComponent(UNiagaraComponent* NiagaraComponent)
+{
+    if (!NiagaraComponent)
+    {
+        UE_LOG(LogTemp, Warning, TEXT("GetNiagaraSystemFromComponent: Invalid Niagara Component!"));
+        return nullptr;
+    }
+
+    UNiagaraSystem* NiagaraSystem = NiagaraComponent->GetAsset();
+
+    if (!NiagaraSystem)
+    {
+        UE_LOG(LogTemp, Warning, TEXT("GetNiagaraSystemFromComponent: Niagara Component does not have a valid Niagara System!"));
+        return nullptr;
+    }
+
+    UE_LOG(LogTemp, Log, TEXT("GetNiagaraSystemFromComponent: Successfully retrieved Niagara System %s"), *NiagaraSystem->GetName());
+    return NiagaraSystem;
+}
+
 /*
 * Setters
 */

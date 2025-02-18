@@ -1,12 +1,12 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "d:\\immersalab\\ueprojects\\ainiagaraplugin\\plugins\\ainiagarafxplugin\\source\\ainiagarafxplugineditor\\private\\ainiagarafxplugineditor.cpp",
+        "Source": "d:\\immersalab\\ueprojects\\ainiagaraplugin\\plugins\\ainiagarafxplugin\\ainiagarafxplugin\\source\\ainiagarafxplugineditor\\private\\ainiagarafxplugineditor.cpp",
         "ProvidedModule": "",
         "PCH": "d:\\immersalab\\ueprojects\\ainiagaraplugin\\intermediate\\build\\win64\\x64\\ainiagaraplugineditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.inclorderunreal5_3.h.pch",
         "Includes": [
-            "d:\\immersalab\\ueprojects\\ainiagaraplugin\\plugins\\ainiagarafxplugin\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\ainiagarafxplugineditor\\definitions.ainiagarafxplugineditor.h",
-            "d:\\immersalab\\ueprojects\\ainiagaraplugin\\plugins\\ainiagarafxplugin\\source\\ainiagarafxplugineditor\\public\\ainiagarafxplugineditor.h",
+            "d:\\immersalab\\ueprojects\\ainiagaraplugin\\plugins\\ainiagarafxplugin\\ainiagarafxplugin\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\ainiagarafxplugineditor\\definitions.ainiagarafxplugineditor.h",
+            "d:\\immersalab\\ueprojects\\ainiagaraplugin\\plugins\\ainiagarafxplugin\\ainiagarafxplugin\\source\\ainiagarafxplugineditor\\public\\ainiagarafxplugineditor.h",
             "d:\\unrealversions\\ue_5.5\\engine\\source\\editor\\unrealed\\public\\unrealed.h",
             "d:\\unrealversions\\ue_5.5\\engine\\source\\runtime\\core\\public\\misc\\monolithicheaderboilerplate.h",
             "d:\\unrealversions\\ue_5.5\\engine\\source\\runtime\\engine\\public\\engine.h",

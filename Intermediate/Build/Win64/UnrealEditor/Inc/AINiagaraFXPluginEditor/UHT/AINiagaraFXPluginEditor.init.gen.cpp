@@ -17,13 +17,13 @@ void EmptyLinkFunctionForGeneratedCodeAINiagaraFXPluginEditor_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000040,
-				0x13AF4D19,
-				0x3884E802,
+				0xEBC028B6,
+				0x495C4AAE,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_AINiagaraFXPluginEditor.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_AINiagaraFXPluginEditor.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_AINiagaraFXPluginEditor(Z_Construct_UPackage__Script_AINiagaraFXPluginEditor, TEXT("/Script/AINiagaraFXPluginEditor"), Z_Registration_Info_UPackage__Script_AINiagaraFXPluginEditor, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x13AF4D19, 0x3884E802));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_AINiagaraFXPluginEditor(Z_Construct_UPackage__Script_AINiagaraFXPluginEditor, TEXT("/Script/AINiagaraFXPluginEditor"), Z_Registration_Info_UPackage__Script_AINiagaraFXPluginEditor, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xEBC028B6, 0x495C4AAE));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

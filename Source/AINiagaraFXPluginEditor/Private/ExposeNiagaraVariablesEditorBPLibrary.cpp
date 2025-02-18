@@ -1,11 +1,16 @@
 ﻿#include "ExposeNiagaraVariablesEditorBPLibrary.h"
 #include "NiagaraVariableHelpers.h"
 #include "NiagaraComponent.h"
+#include "NiagaraSystem.h"
 #include "NiagaraSystemInstanceController.h"
 #include "NiagaraSystemInstance.h"
+#include "NiagaraParameterStore.h"
+#include "NiagaraTypes.h"
+#include "NiagaraEmitter.h"
 #include "NiagaraEmitterInstance.h"
 #include "NiagaraEmitterHandle.h"
-#include "NiagaraEmitter.h"
+#include "Logging/LogMacros.h"
+
 
 #if WITH_EDITOR
 #include "Modules/ModuleManager.h"

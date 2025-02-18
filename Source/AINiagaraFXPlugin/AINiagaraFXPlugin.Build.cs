@@ -1,4 +1,3 @@
-// Copyright (c) 2024 HashemGameDev. All Rights Reserved.
 
 using UnrealBuildTool;
 
@@ -43,14 +42,12 @@ public class AINiagaraFXPlugin : ModuleRules
                 "ApplicationCore", // Helps with low-level engine interactions
                 "EditorFramework", // Helps if you interact with editor functionality
                 "UnrealEd", // Needed if accessing editor components
-                "AssetTools", // Helps with asset manipulation
-                "VerseVM" // May be needed to fix VerseVM errors
+                "AssetTools" // Helps with asset manipulation
             }
         );
 
         DynamicallyLoadedModuleNames.AddRange(
-            new string[]
-            {
+            new string[] {
                 // Add dynamic modules if needed
             }
         );

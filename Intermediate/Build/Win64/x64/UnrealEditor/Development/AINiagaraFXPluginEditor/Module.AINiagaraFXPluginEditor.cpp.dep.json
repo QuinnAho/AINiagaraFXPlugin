@@ -1,14 +1,14 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "d:\\immersalab\\ueprojects\\ainiagaraplugin\\plugins\\ainiagarafxplugin\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\ainiagarafxplugineditor\\module.ainiagarafxplugineditor.cpp",
+        "Source": "d:\\immersalab\\ueprojects\\ainiagaraplugin\\plugins\\ainiagarafxplugin\\ainiagarafxplugin\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\ainiagarafxplugineditor\\module.ainiagarafxplugineditor.cpp",
         "ProvidedModule": "",
         "PCH": "d:\\immersalab\\ueprojects\\ainiagaraplugin\\intermediate\\build\\win64\\x64\\ainiagaraplugineditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.inclorderunreal5_3.h.pch",
         "Includes": [
-            "d:\\immersalab\\ueprojects\\ainiagaraplugin\\plugins\\ainiagarafxplugin\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\ainiagarafxplugineditor\\definitions.ainiagarafxplugineditor.h",
-            "d:\\immersalab\\ueprojects\\ainiagaraplugin\\plugins\\ainiagarafxplugin\\intermediate\\build\\win64\\unrealeditor\\inc\\ainiagarafxplugineditor\\uht\\ainiagarafxplugineditor.init.gen.cpp",
-            "d:\\immersalab\\ueprojects\\ainiagaraplugin\\plugins\\ainiagarafxplugin\\intermediate\\build\\win64\\unrealeditor\\inc\\ainiagarafxplugineditor\\uht\\exposeniagaravariableseditorbplibrary.gen.cpp",
-            "d:\\immersalab\\ueprojects\\ainiagaraplugin\\plugins\\ainiagarafxplugin\\source\\ainiagarafxplugineditor\\public\\exposeniagaravariableseditorbplibrary.h",
+            "d:\\immersalab\\ueprojects\\ainiagaraplugin\\plugins\\ainiagarafxplugin\\ainiagarafxplugin\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\ainiagarafxplugineditor\\definitions.ainiagarafxplugineditor.h",
+            "d:\\immersalab\\ueprojects\\ainiagaraplugin\\plugins\\ainiagarafxplugin\\ainiagarafxplugin\\intermediate\\build\\win64\\unrealeditor\\inc\\ainiagarafxplugineditor\\uht\\ainiagarafxplugineditor.init.gen.cpp",
+            "d:\\immersalab\\ueprojects\\ainiagaraplugin\\plugins\\ainiagarafxplugin\\ainiagarafxplugin\\intermediate\\build\\win64\\unrealeditor\\inc\\ainiagarafxplugineditor\\uht\\exposeniagaravariableseditorbplibrary.gen.cpp",
+            "d:\\immersalab\\ueprojects\\ainiagaraplugin\\plugins\\ainiagarafxplugin\\ainiagarafxplugin\\source\\ainiagarafxplugineditor\\public\\exposeniagaravariableseditorbplibrary.h",
             "d:\\unrealversions\\ue_5.5\\engine\\plugins\\fx\\niagara\\source\\niagara\\public\\niagaracomponent.h",
             "d:\\unrealversions\\ue_5.5\\engine\\plugins\\fx\\niagara\\source\\niagara\\public\\niagaradefines.h",
             "d:\\unrealversions\\ue_5.5\\engine\\plugins\\fx\\niagara\\source\\niagara\\public\\niagarascalabilitystate.h",
@@ -33,8 +33,8 @@
             "d:\\unrealversions\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\emitter.generated.h",
             "d:\\unrealversions\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\particlesystemcomponent.generated.h",
             "d:\\unrealversions\\ue_5.5\\engine\\plugins\\fx\\niagara\\intermediate\\build\\win64\\unrealeditor\\inc\\niagara\\uht\\niagaracomponent.generated.h",
-            "d:\\immersalab\\ueprojects\\ainiagaraplugin\\plugins\\ainiagarafxplugin\\intermediate\\build\\win64\\unrealeditor\\inc\\ainiagarafxplugineditor\\uht\\exposeniagaravariableseditorbplibrary.generated.h",
-            "d:\\immersalab\\ueprojects\\ainiagaraplugin\\plugins\\ainiagarafxplugin\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\ainiagarafxplugineditor\\permoduleinline.gen.cpp",
+            "d:\\immersalab\\ueprojects\\ainiagaraplugin\\plugins\\ainiagarafxplugin\\ainiagarafxplugin\\intermediate\\build\\win64\\unrealeditor\\inc\\ainiagarafxplugineditor\\uht\\exposeniagaravariableseditorbplibrary.generated.h",
+            "d:\\immersalab\\ueprojects\\ainiagaraplugin\\plugins\\ainiagarafxplugin\\ainiagarafxplugin\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\ainiagarafxplugineditor\\permoduleinline.gen.cpp",
             "d:\\unrealversions\\ue_5.5\\engine\\source\\runtime\\core\\public\\hal\\permoduleinline.inl"
         ],
         "ImportedModules": [],
